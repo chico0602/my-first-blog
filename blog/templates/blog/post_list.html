@@ -8,17 +8,12 @@
     <div>
       <h1> <a href="/">Chico`s Blog</a> </h1>
     </div>
-
-    <div>
-      <p>published: 31.12.2019, 17:30</p>
-      <h2> <a href="">My first post</a></h2>
-      <p>Aenean eu leo quam. </p>
-    </div>
-
-    <div>
-      <p>公開日:2019/12/31, 17:30</p>
-      <h2> <a href="">2番目の投稿</a> </h2>
-      <p></p>
-    </div>
+    {% for post in posts %}
+      <div>
+        <p>published: {{post.published_date}}</p>
+        <h2> <a href="">{{post.title}}</a> </h2>
+        <p>{{post.text|linebreaksbr}}</p>
+      </div>
+    {% endfor %}
   </body>
 </html>
