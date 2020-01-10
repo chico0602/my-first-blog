@@ -6,3 +6,9 @@ myvenv
 db.sqlite3
 /static
 .DS_Store
+
+*.pyc
+db.splite3
+myvenv
+__pycache__
+local_settings.py
